@@ -1,0 +1,232 @@
+[
+    {
+        "id": 1,
+        "categoria": "Documentação",
+        "titulo": "Tirar o CPF pela primeira vez",
+        "palavras_chave": ["cpf", "tirar cpf", "fazer cpf", "inscricao no cpf", "cadastro de pessoa fisica", "receita federal"],
+        "resposta": "A inscrição no CPF é gratuita e pode ser pedida pela internet, no site da Receita Federal, ou nas unidades de atendimento da Receita. Também dá para fazer em unidades conveniadas (Correios, Banco do Brasil, Caixa ou cartório de registro civil), mas nelas é cobrada uma taxa de R$ 7,00. Não é preciso pagar intermediários.",
+        "documentos": [
+            "Documento de identificação oficial com foto",
+            "Certidão de nascimento ou de casamento (se o documento com foto não mostrar naturalidade, filiação e data de nascimento)"
+        ],
+        "onde": "Site da Receita Federal (gov.br), unidades da Receita Federal ou unidades conveniadas (Correios, Banco do Brasil, Caixa e cartórios)",
+        "fonte": "https://www.gov.br/pt-br/servicos/inscrever-no-cpf",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 2,
+        "categoria": "Documentação",
+        "titulo": "Tirar a Carteira de Identidade Nacional (CIN), o novo RG",
+        "palavras_chave": ["rg", "identidade", "carteira de identidade", "cin", "registro geral", "novo rg", "segunda via", "2a via"],
+        "resposta": "A Carteira de Identidade Nacional (CIN) substitui o antigo RG e usa o número do CPF como número único de identificação. Ela vale em todo o Brasil e nos países do Mercosul. A primeira via é gratuita e é emitida pelo órgão de identificação do seu estado. Depois de emitida, a versão digital fica disponível no aplicativo gov.br.",
+        "documentos": [
+            "Certidão de nascimento ou de casamento",
+            "CPF regularizado (o número do CPF passa a ser o número da identidade)"
+        ],
+        "onde": "Órgão de identificação do seu estado (em São Paulo, o Poupatempo). Versão digital no aplicativo gov.br",
+        "fonte": "https://www.gov.br/governodigital/pt-br/identidade/cin/carteira-de-identidade-nacional-cin",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 3,
+        "categoria": "Documentação",
+        "titulo": "Tirar o primeiro título de eleitor",
+        "palavras_chave": ["titulo de eleitor", "titulo eleitoral", "eleitor", "votar", "tse", "cartorio eleitoral"],
+        "resposta": "O primeiro título pode ser pedido pela internet, no Autoatendimento Eleitoral do TSE, ou em um cartório eleitoral. O voto é opcional aos 16 e 17 anos e obrigatório dos 18 aos 70 anos. Se você ainda não tem biometria cadastrada, pode ser preciso ir ao cartório depois. Atenção: o cadastro de eleitores fecha alguns meses antes de cada eleição.",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "Comprovante de residência recente",
+            "Foto (selfie) segurando o documento, se o pedido for pela internet",
+            "Certificado de quitação do serviço militar (para homens, a partir do ano em que completam 19 anos)"
+        ],
+        "onde": "Autoatendimento Eleitoral no site do TSE ou cartório eleitoral da sua cidade",
+        "fonte": "https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 4,
+        "categoria": "Documentação",
+        "titulo": "Fazer o alistamento militar obrigatório",
+        "palavras_chave": ["alistamento", "alistamento militar", "alistar", "servico militar", "exercito", "junta militar", "reservista"],
+        "resposta": "O alistamento é obrigatório para homens no ano em que completam 18 anos e opcional para mulheres, seguindo a mesma idade. O prazo vai de 1º de janeiro a 30 de junho. Pode ser feito pela internet, no site alistamento.eb.mil.br (com a conta gov.br), ou presencialmente na Junta de Serviço Militar da sua cidade.",
+        "documentos": [
+            "Conta gov.br (para o alistamento pela internet)",
+            "Documento oficial de identificação com foto",
+            "CPF"
+        ],
+        "onde": "Site alistamento.eb.mil.br ou Junta de Serviço Militar do seu município",
+        "fonte": "https://www.gov.br/defesa/pt-br/assuntos/servico-militar",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 5,
+        "categoria": "Trabalho e Renda",
+        "titulo": "Obter a Carteira de Trabalho Digital",
+        "palavras_chave": ["carteira de trabalho", "carteira de trabalho digital", "ctps", "carteira digital", "carteira assinada", "registro em carteira"],
+        "resposta": "A Carteira de Trabalho agora é digital e gratuita. Basta baixar o aplicativo Carteira de Trabalho Digital (Android ou iOS) ou acessar pelo site gov.br e entrar com a sua conta gov.br. O atendimento é imediato. No aplicativo você acompanha seus contratos de trabalho e pode pedir o seguro-desemprego.",
+        "documentos": [
+            "Número do CPF",
+            "Conta gov.br"
+        ],
+        "onde": "Aplicativo Carteira de Trabalho Digital ou portal gov.br. Dúvidas: Central 158 do Ministério do Trabalho",
+        "fonte": "https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 6,
+        "categoria": "Trabalho e Renda",
+        "titulo": "Ser Jovem Aprendiz (Aprendizagem Profissional)",
+        "palavras_chave": ["jovem aprendiz", "aprendiz", "aprendizagem", "menor aprendiz", "primeiro emprego", "curso de aprendizagem"],
+        "resposta": "A Aprendizagem Profissional é para jovens de 14 a 24 anos (e pessoas com deficiência, sem limite de idade). O aprendiz tem carteira assinada, com contrato de até 2 anos, e faz ao mesmo tempo um curso de aprendizagem em uma entidade habilitada pelo Ministério do Trabalho e Emprego. Quem ainda não terminou o ensino médio precisa estar matriculado e frequentando a escola.",
+        "documentos": [
+            "CPF",
+            "Carteira de Trabalho Digital",
+            "Comprovante de matrícula escolar (se ainda não concluiu o ensino médio)"
+        ],
+        "onde": "Entidades formadoras habilitadas (lista de cursos autorizados no site do Ministério do Trabalho e Emprego) e empresas que contratam aprendizes",
+        "fonte": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 7,
+        "categoria": "Trabalho e Renda",
+        "titulo": "Pedir o seguro-desemprego",
+        "palavras_chave": ["seguro desemprego", "demitido", "demissao", "desempregado", "sem justa causa", "perdi o emprego"],
+        "resposta": "O seguro-desemprego é uma ajuda financeira temporária para quem trabalhava com carteira assinada e foi demitido sem justa causa. No primeiro pedido, é preciso ter recebido salário em pelo menos 12 dos últimos 18 meses antes da demissão. O pedido é feito pelo aplicativo Carteira de Trabalho Digital, pelo portal gov.br ou pelo telefone 158.",
+        "documentos": [
+            "Requerimento do Seguro-Desemprego (entregue pelo empregador no momento da demissão)",
+            "Número do CPF"
+        ],
+        "onde": "Aplicativo Carteira de Trabalho Digital, portal gov.br, telefone 158 ou atendimento presencial agendado",
+        "fonte": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 8,
+        "categoria": "Trabalho e Renda",
+        "titulo": "Consultar e entender o FGTS",
+        "palavras_chave": ["fgts", "fundo de garantia", "saldo do fgts", "sacar fgts", "saque aniversario"],
+        "resposta": "O FGTS é um valor que o empregador deposita todo mês em uma conta na Caixa em seu nome, sem descontar do seu salário: 8% da remuneração (2% para o menor aprendiz). Você acompanha o saldo e os depósitos pelo aplicativo FGTS. O saque só é permitido nos casos previstos em lei, como demissão sem justa causa, aposentadoria, compra da casa própria ou saque-aniversário.",
+        "documentos": [
+            "Número do CPF",
+            "Documento de identificação com foto (para atendimento em agência da Caixa)"
+        ],
+        "onde": "Aplicativo FGTS (Caixa) ou agências da Caixa",
+        "fonte": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/fgts",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 9,
+        "categoria": "Saúde e Cidadania",
+        "titulo": "Fazer o Cartão Nacional de Saúde (Cartão SUS)",
+        "palavras_chave": ["cartao sus", "cartao do sus", "sus", "cns", "cartao nacional de saude"],
+        "resposta": "O Cartão SUS é gratuito. Se você nunca fez, vá a uma Unidade Básica de Saúde (UBS) com seus documentos para se cadastrar. Se já tem cadastro, pode ver o número e o cartão digital no aplicativo Meu SUS Digital, entrando com a conta gov.br.",
+        "documentos": [
+            "Documento de identificação com foto",
+            "CPF",
+            "Comprovante de residência"
+        ],
+        "onde": "Qualquer UBS (posto de saúde) ou aplicativo Meu SUS Digital",
+        "fonte": "https://www.gov.br/saude/pt-br/composicao/seidigi/meususdigital",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 10,
+        "categoria": "Saúde e Cidadania",
+        "titulo": "Tomar vacinas gratuitas e atualizar a caderneta",
+        "palavras_chave": ["vacina", "vacinas", "vacinacao", "vacinar", "caderneta de vacinacao", "carteira de vacinacao"],
+        "resposta": "As vacinas do Calendário Nacional de Vacinação do SUS são gratuitas e aplicadas nas unidades de saúde (UBS). Se alguma dose ficou para trás, é sempre possível atualizar. Leve sua caderneta para o profissional ver o que falta. Você também pode consultar a Carteira de Vacinação Digital no aplicativo Meu SUS Digital.",
+        "documentos": [
+            "Caderneta de vacinação (se tiver)",
+            "Documento de identificação com foto ou Cartão SUS"
+        ],
+        "onde": "Unidade Básica de Saúde (UBS) mais próxima; histórico no aplicativo Meu SUS Digital",
+        "fonte": "https://www.gov.br/saude/pt-br/vacinacao",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 11,
+        "categoria": "Saúde e Cidadania",
+        "titulo": "Inscrever a família no Cadastro Único (CadÚnico)",
+        "palavras_chave": ["cadunico", "cadastro unico", "bolsa familia", "cras", "programas sociais", "beneficio social"],
+        "resposta": "O Cadastro Único é gratuito e é a porta de entrada para mais de 40 programas sociais, como Bolsa Família, Tarifa Social de Energia Elétrica e Auxílio Gás. Podem se cadastrar famílias com renda de até meio salário mínimo por pessoa (ou acima disso, quando o programa exigir). O cadastro é presencial, no CRAS ou posto de cadastramento da sua cidade, feito pelo responsável pela família.",
+        "documentos": [
+            "CPF de todas as pessoas da família (obrigatório)",
+            "Documento de identificação do responsável familiar",
+            "Comprovante de residência, se houver (de preferência conta de luz)"
+        ],
+        "onde": "CRAS ou posto de cadastramento do Cadastro Único do seu município",
+        "fonte": "https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 12,
+        "categoria": "Saúde e Cidadania",
+        "titulo": "Reclamar de uma compra com problema (direitos do consumidor)",
+        "palavras_chave": ["consumidor", "procon", "reclamar", "reclamacao", "defeito", "devolver", "arrependimento", "compra deu errado"],
+        "resposta": "Primeiro tente resolver com a empresa e guarde os comprovantes e protocolos. Se não resolver, registre uma reclamação gratuita no site oficial consumidor.gov.br (a empresa tem até 10 dias para responder) ou procure o Procon da sua cidade. Em compras feitas pela internet ou por telefone, você pode desistir em até 7 dias após receber o produto (direito de arrependimento, art. 49 do Código de Defesa do Consumidor).",
+        "documentos": [
+            "Nota fiscal ou comprovante da compra",
+            "Números de protocolo e conversas com a empresa",
+            "Conta gov.br (para acessar o consumidor.gov.br)"
+        ],
+        "onde": "Site consumidor.gov.br ou Procon da sua cidade",
+        "fonte": "https://www.consumidor.gov.br",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 13,
+        "categoria": "Energia e Sustentabilidade",
+        "titulo": "Tarifa Social de Energia Elétrica: desconto na conta de luz",
+        "palavras_chave": ["conta de luz", "tarifa social", "desconto na conta de luz", "desconto na luz", "luz de graca", "baixa renda", "tsee"],
+        "resposta": "A Tarifa Social dá desconto na conta de luz para famílias no CadÚnico com renda de até meio salário mínimo por pessoa e para idosos (65 anos ou mais) ou pessoas com deficiência que recebem o BPC. Pela regra da ANEEL para contas emitidas a partir de 5 de julho de 2025, quem tem direito não paga pelos primeiros 80 kWh do mês (tributos como ICMS e iluminação pública podem continuar na conta). O CadÚnico precisa ter sido atualizado nos últimos 2 anos. Se o desconto não aparecer, procure a sua distribuidora de energia.",
+        "documentos": [
+            "Cadastro Único atualizado (NIS)",
+            "CPF",
+            "Conta de luz (número da unidade consumidora)"
+        ],
+        "onde": "Distribuidora de energia da sua região; CRAS para fazer ou atualizar o CadÚnico",
+        "fonte": "https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 14,
+        "categoria": "Energia e Sustentabilidade",
+        "titulo": "Entender as bandeiras tarifárias da conta de luz",
+        "palavras_chave": ["bandeira", "bandeiras", "bandeira tarifaria", "bandeira vermelha", "bandeira amarela", "bandeira verde", "luz mais cara"],
+        "resposta": "As bandeiras tarifárias mostram, todo mês, se gerar energia está mais caro. Bandeira verde: condições favoráveis, sem acréscimo na tarifa. Bandeira amarela: condições menos favoráveis, com acréscimo. Bandeira vermelha (patamares 1 e 2): condições mais caras, com acréscimo maior. A ANEEL define a cor de cada mês, e ela aparece na sua conta. Nas bandeiras amarela e vermelha, economizar energia faz ainda mais diferença.",
+        "documentos": [
+            "Nenhum documento: basta olhar a bandeira do mês na conta de luz ou no site da ANEEL"
+        ],
+        "onde": "Site da ANEEL e a própria conta de luz",
+        "fonte": "https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 15,
+        "categoria": "Energia e Sustentabilidade",
+        "titulo": "Economizar energia e escolher aparelhos eficientes (Selo Procel)",
+        "palavras_chave": ["economizar energia", "economizar luz", "selo procel", "procel", "gastar menos", "eficiencia energetica", "consumo de energia"],
+        "resposta": "Ao comprar eletrodomésticos, prefira os que têm o Selo Procel e a Etiqueta Nacional de Conservação de Energia (ENCE) com classificação A, que indica menor consumo. No dia a dia: apague as luzes ao sair do cômodo, use lâmpadas LED, não deixe a geladeira aberta e tire da tomada os aparelhos que ficam em stand-by.",
+        "documentos": [
+            "Nenhum documento necessário"
+        ],
+        "onde": "Site do Procel e etiqueta colada no produto na loja",
+        "fonte": "https://smartseloprocel.procelinfo.com.br/selo-procel",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 16,
+        "categoria": "Energia e Sustentabilidade",
+        "titulo": "Gerar a própria energia solar em casa (geração distribuída)",
+        "palavras_chave": ["energia solar", "painel solar", "paineis solares", "placa solar", "placas solares", "geracao distribuida", "gerar energia"],
+        "resposta": "Quem instala painéis solares em casa pode gerar a própria energia e ficar conectado à rede da distribuidora. A energia que sobra vira crédito para abater nas próximas contas (Sistema de Compensação de Energia Elétrica), conforme a Lei nº 14.300/2022 e as regras da ANEEL. Antes de instalar, contrate um profissional habilitado e peça a conexão à sua distribuidora.",
+        "documentos": [
+            "Conta de luz (número da unidade consumidora)",
+            "Projeto do sistema feito por responsável técnico habilitado"
+        ],
+        "onde": "Distribuidora de energia da sua região; regras no site da ANEEL",
+        "fonte": "https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida",
+        "verificado_em": "2026-11-16"
+    }
+]
