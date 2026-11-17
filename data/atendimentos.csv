@@ -14,4 +14,6 @@ data,sessao,origem,pergunta,id_orientacao,encontrou,ajudou,tentativas,tempo_segu
 2026-11-16 15:51:17,2026-11-16 15:49:49,pergunta,Como faço o cartão do SUS?,9,True,True,1,64.5,
 2026-11-16 15:52:11,2026-11-16 15:49:49,pergunta,conta de luz,,False,False,1,53.7,
 2026-11-16 15:52:37,2026-11-16 15:49:49,categoria,[Documentação] Tirar o CPF pela primeira vez,1,True,True,1,8.6,
-2026-11-16 15:54:46,2026-11-16 15:53:57,pergunta,conta de luz,13,True,True,1,37.8,
+2026-11-16 15:54:46,2026-11-16 15:53:57,pergunta,conta de luz,13,True,True,1,37.8,5
+2026-11-16 22:15:38,2026-11-16 22:09:04,pergunta,aquecedor solar,17,True,True,1,363.7,5
+2026-11-16 22:17:05,2026-11-16 22:16:10,pergunta,aquecedor solar,17,True,True,1,31.0,5

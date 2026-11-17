@@ -1,0 +1,104 @@
+{
+    "titulo": "Estudo Energético Comparativo — Aquecimento de Água Residencial (SERS)",
+    "autor": "Alan Júnior Araújo de Souza (RM 574112)",
+    "disciplina": "Soluções em Energias Renováveis e Sustentáveis (SERS)",
+    "data_referencia": "2026-11-16",
+    "publico_alvo": "Jovens no primeiro emprego e famílias brasileiras de renda baixa a média (residência padrão com 3 moradores)",
+    "necessidade_energetica": "Aquecimento de água para banho diário (3 banhos por dia, 30 dias por mês)",
+    "periodos_referencia": {
+        "mensal_dias": 30,
+        "anual_meses": 12,
+        "horizonte_anos": 5,
+        "horizonte_meses": 60
+    },
+    "dados_publicos_reais": {
+        "tarifa_residencial_brl_kwh": {
+            "valor": 0.80,
+            "unidade": "R$/kWh",
+            "tipo": "dado_publico_referencia",
+            "descricao": "Tarifa residencial média de referência (Subgrupo B1), dentro da mediana nacional de R$ 0,79 a R$ 0,85/kWh divulgada pela ANEEL (sem bandeiras adicionais; varia conforme distribuidora e tributos estaduais).",
+            "fonte": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/relatorios-e-indicadores/tarifas-e-informacoes-economico-financeiras"
+        },
+        "fator_emissao_sin_kgco2_kwh": {
+            "valor": 0.0461,
+            "unidade": "kgCO2/kWh",
+            "tipo": "dado_publico_real",
+            "descricao": "Fator médio anual de emissão de CO2 pela geração de energia elétrica no Sistema Interligado Nacional (SIN) — Ano Base consolidado 2025 (0,0461 tCO2/MWh).",
+            "fonte": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/sirene/dados-e-ferramentas/fatores-de-emissao"
+        },
+        "consumo_residencial_medio_brasil_kwh_mes": {
+            "valor_min": 177,
+            "valor_max": 180,
+            "unidade": "kWh/mês",
+            "tipo": "dado_publico_real",
+            "descricao": "Consumo médio mensal por domicílio residencial no Brasil (EPE), com forte participação do aquecimento de água (chuveiro elétrico entre 4.400 W e 7.600 W).",
+            "fonte": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica"
+        }
+    },
+    "estimativas_justificadas_uso": {
+        "moradores": {
+            "valor": 3,
+            "unidade": "pessoas",
+            "tipo": "estimativa_justificada",
+            "justificativa": "Família urbana típica (jovem trabalhador com familiares ou moradia compartilhada)."
+        },
+        "fracao_solar_sas": {
+            "valor": 0.80,
+            "unidade": "adimensional (80%)",
+            "tipo": "estimativa_justificada",
+            "justificativa": "Em sistemas de aquecimento solar (SAS) certificados pelo Procel/Inmetro no clima brasileiro, estima-se que 80% da energia térmica venha do sol ao longo do ano, mantendo 20% de apoio elétrico para dias nublados ou chuvosos."
+        }
+    },
+    "cenarios": [
+        {
+            "id": "base",
+            "nome": "Cenário Base — Chuveiro Elétrico Tradicional (5.500 W)",
+            "categoria_sers": "Referência de alto consumo",
+            "potencia_w": 5500,
+            "minutos_banho_por_pessoa_dia": 12,
+            "horas_uso_dia": 0.60,
+            "fator_consumo_eletrico": 1.0,
+            "capex_brl": 0.0,
+            "tipo_dados": "potencia_tipica_publica_e_uso_estimado",
+            "viabilidade": "Equipamento já existente na maioria dos lares, porém representa parcela elevada da conta de luz e sobrecarga no horário de pico (17h às 20h).",
+            "limitacoes": "Consumo varia fortemente com a temperatura da região (posição inverno/verão) e o tempo real de banho.",
+            "fonte_referencia": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/atlas-da-eficiencia-energetica-brasil"
+        },
+        {
+            "id": "eficiencia",
+            "nome": "Alternativa 1 — Eficiência Energética (Chuveiro Multitemperatura 3.800 W + Redutor de Vazão + Banho de 8 min)",
+            "categoria_sers": "Eficiência energética e conservação",
+            "potencia_w": 3800,
+            "minutos_banho_por_pessoa_dia": 8,
+            "horas_uso_dia": 0.40,
+            "fator_consumo_eletrico": 1.0,
+            "capex_brl": 180.0,
+            "tipo_dados": "estimativa_justificada",
+            "viabilidade": "Viabilidade imediata e universal (inclusive em imóveis alugados). Baixo investimento inicial e retorno rápido.",
+            "limitacoes": "Depende da disciplina dos moradores para manter banhos curtos e ajustar a potência conforme o clima; redução menor em dias muito frios.",
+            "fonte_referencia": "https://smartseloprocel.procelinfo.com.br/selo-procel"
+        },
+        {
+            "id": "renovavel_sas",
+            "nome": "Alternativa 2 — Fonte Renovável (Aquecedor Solar de Água Compacto 200 L com Selo Procel)",
+            "categoria_sers": "Fonte renovável (energia solar térmica)",
+            "potencia_w": 5500,
+            "minutos_banho_por_pessoa_dia": 12,
+            "horas_uso_dia": 0.60,
+            "fator_consumo_eletrico": 0.20,
+            "capex_brl": 3200.0,
+            "tipo_dados": "estimativa_justificada",
+            "viabilidade": "Viabilidade média a alta para casas próprias com telhado ensolarado e tubulação compatível (água quente/fria). Não indicado para apartamentos ou imóveis alugados sem autorização.",
+            "limitacoes": "CAPEX inicial mais elevado (~R$ 3.200 estimado); geração térmica depende da irradiação solar local, inclinação do telhado e ausência de sombreamento. Em períodos nublados prolongados, exige apoio elétrico.",
+            "fonte_referencia": "https://smartseloprocel.procelinfo.com.br/selo-procel"
+        }
+    ],
+    "referencia_complementar_fotovoltaica": {
+        "nome": "Microgeração Solar Fotovoltaica Residencial (Sistema conectado à rede — Lei 14.300/2022)",
+        "descricao": "Diferente do aquecedor solar térmico (SAS, focado em água), o sistema fotovoltaico gera eletricidade para toda a residência e compensa créditos na conta de luz.",
+        "capex_estimado_kit_residencial_pequeno_brl": "R$ 8.000 a R$ 14.000 (estimativa de mercado para ~1,5 a 2,5 kWp)",
+        "payback_tipico_anos": "4 a 7 anos (varia conforme tarifa local, irradiação e regras da Lei 14.300/2022)",
+        "limitacoes": "Exige aprovação na distribuidora, telhado próprio ou autoconsumo remoto e investimento inicial maior que eficiência ou SAS.",
+        "fonte": "https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida"
+    }
+}

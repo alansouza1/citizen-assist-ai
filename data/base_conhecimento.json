@@ -207,11 +207,11 @@
         "categoria": "Energia e Sustentabilidade",
         "titulo": "Economizar energia e escolher aparelhos eficientes (Selo Procel)",
         "palavras_chave": ["economizar energia", "economizar luz", "selo procel", "procel", "gastar menos", "eficiencia energetica", "consumo de energia"],
-        "resposta": "Ao comprar eletrodomésticos, prefira os que têm o Selo Procel e a Etiqueta Nacional de Conservação de Energia (ENCE) com classificação A, que indica menor consumo. No dia a dia: apague as luzes ao sair do cômodo, use lâmpadas LED, não deixe a geladeira aberta e tire da tomada os aparelhos que ficam em stand-by.",
+        "resposta": "Ao comprar eletrodomésticos (como geladeira ou chuveiro), prefira os que têm o Selo Procel e a Etiqueta ENCE classificação A, que consomem menos eletricidade. No banho, o chuveiro elétrico tradicional (5.500 W) em uma casa com 3 pessoas pode gastar ~99 kWh/mês (cerca de R$ 79,20 a R$ 0,80/kWh). Trocando para um modelo multitemperatura regulado (3.800 W), usando redutor de vazão e reduzindo o banho de 12 para 8 minutos, o consumo cai para ~45,6 kWh/mês: economia estimada de R$ 42,72/mês (retorno de ~4,2 meses sobre um gasto de R$ 180,00) e 147,7 kgCO2 evitados em 5 anos (fator SIN/MCTI 2025). Atenção: essas estimativas não são garantidas e variam conforme tarifa local, bandeira, clima e tempo real de uso.",
         "documentos": [
-            "Nenhum documento necessário"
+            "Nenhum documento necessário (opcional: opção 5 do menu principal abre a tabela completa do estudo SERS)"
         ],
-        "onde": "Site do Procel e etiqueta colada no produto na loja",
+        "onde": "Site do Procel, etiqueta colada no produto e opção 5 (Simulador SERS) no menu principal",
         "fonte": "https://smartseloprocel.procelinfo.com.br/selo-procel",
         "verificado_em": "2026-11-16"
     },
@@ -219,14 +219,28 @@
         "id": 16,
         "categoria": "Energia e Sustentabilidade",
         "titulo": "Gerar a própria energia solar em casa (geração distribuída)",
-        "palavras_chave": ["energia solar", "painel solar", "paineis solares", "placa solar", "placas solares", "geracao distribuida", "gerar energia"],
-        "resposta": "Quem instala painéis solares em casa pode gerar a própria energia e ficar conectado à rede da distribuidora. A energia que sobra vira crédito para abater nas próximas contas (Sistema de Compensação de Energia Elétrica), conforme a Lei nº 14.300/2022 e as regras da ANEEL. Antes de instalar, contrate um profissional habilitado e peça a conexão à sua distribuidora.",
+        "palavras_chave": ["energia solar", "painel solar", "paineis solares", "placa solar", "placas solares", "geracao distribuida", "gerar energia", "fotovoltaica"],
+        "resposta": "Painéis solares fotovoltaicos geram eletricidade para a residência inteira e abatem créditos na conta de luz pela Lei nº 14.300/2022 (ANEEL). Um kit residencial pequeno (~1,5 a 2,5 kWp) tem investimento inicial estimado de R$ 8.000 a R$ 14.000, com retorno típico entre 4 e 7 anos (dependendo da tarifa local e irradiação). Não confunda com o aquecedor solar de água (SAS), que aquece só a água do banho com custo inicial menor (~R$ 3.200). Quem mora de aluguel sem autorização pode optar primeiro por eficiência energética (custo baixo) ou autoconsumo remoto. Limitação: geração, custos e payback são estimativas médias e não são garantidos.",
         "documentos": [
             "Conta de luz (número da unidade consumidora)",
-            "Projeto do sistema feito por responsável técnico habilitado"
+            "Projeto do sistema feito por responsável técnico habilitado",
+            "Autorização do proprietário (se imóvel alugado) e parecer de acesso na distribuidora"
         ],
-        "onde": "Distribuidora de energia da sua região; regras no site da ANEEL",
+        "onde": "Distribuidora de energia da sua região; regras na ANEEL e opção 5 (Simulador SERS) no menu",
         "fonte": "https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida",
+        "verificado_em": "2026-11-16"
+    },
+    {
+        "id": 17,
+        "categoria": "Energia e Sustentabilidade",
+        "titulo": "Comparar chuveiro eficiente e aquecimento solar de água (SERS)",
+        "palavras_chave": ["chuveiro", "chuveiro eletrico", "aquecedor solar", "aquecimento solar", "banho", "simulador", "sers", "comparar energia"],
+        "resposta": "Para 3 moradores tomando banho diário (tarifa ref. ANEEL R$ 0,80/kWh e fator SIN/MCTI 0,0461 kgCO2/kWh): (1) Base (chuveiro 5.500 W, 12 min/banho): 99,0 kWh/mês (R$ 79,20/mês). (2) Alternativa de Eficiência (chuveiro 3.800 W + redutor de vazão + 8 min): 45,6 kWh/mês (-53,9%), economia de R$ 42,72/mês, investimento estimado de R$ 180, payback de ~4,2 meses e 147,70 kgCO2 evitados em 5 anos — ideal para qualquer imóvel, inclusive alugado. (3) Alternativa Renovável (Aquecedor Solar Compacto 200 L com Selo Procel, ~80% de fração solar e 20% apoio elétrico): 19,8 kWh/mês (-80%), economia de R$ 63,36/mês, investimento estimado de R$ 3.200, payback de ~50,5 meses (~4,2 anos) e 219,06 kgCO2 evitados em 5 anos — indicado para casa própria com telhado ensolarado. Limitação: valores são estimativas e variam com clima, tarifa local e hábitos de uso.",
+        "documentos": [
+            "Nenhum documento necessário (digite 5 no menu principal para ver a tabela completa do estudo SERS)"
+        ],
+        "onde": "Menu principal opção 5 (Simulador SERS); listas de coletores certificados no site do Selo Procel",
+        "fonte": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica",
         "verificado_em": "2026-11-16"
     }
 ]

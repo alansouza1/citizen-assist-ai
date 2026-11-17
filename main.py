@@ -13,6 +13,7 @@ import os
 from assistente import Assistente, ler_opcao
 from base_conhecimento import BaseConhecimento
 from orientacao import AVISO
+from sers_energia.analise_energetica import exibir_comparativo_sers
 
 NOME_ASSISTENTE = "Citizen Assist AI"
 
@@ -40,6 +41,7 @@ def mostrar_menu():
     print("2 - Navegar por categorias")
     print("3 - Ver indicadores de atendimento")
     print("4 - Exportar atendimentos para CSV")
+    print("5 - Simulador e Comparativo de Energia Sustentável (SERS)")
     print("0 - Sair")
 
 
@@ -71,7 +73,7 @@ def main():
 
     while True:
         mostrar_menu()
-        opcao = ler_opcao("Escolha uma opção: ", 0, 4)
+        opcao = ler_opcao("Escolha uma opção: ", 0, 5)
         if opcao == 1:
             assistente.perguntar()          # usa base.buscar() e orientacao.exibir()
         elif opcao == 2:
@@ -84,6 +86,9 @@ def main():
             if quantidade >= 0:
                 print(f"\n{quantidade} atendimento(s) exportado(s) para "
                       f"{assistente.caminho_csv}")
+        elif opcao == 5:
+            exibir_comparativo_sers()
+            input("\nPressione Enter para voltar ao menu...")
         elif opcao == 0:
             if sair(assistente):
                 break

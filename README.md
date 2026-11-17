@@ -23,7 +23,7 @@ Assistente executado no terminal que responde dúvidas do cidadão **apenas com 
 
 **Solução:** um assistente em Python que:
 
-- carrega uma base de conhecimento em JSON com **16 orientações reais em 4 categorias**;
+- carrega uma base de conhecimento em JSON com **17 orientações reais em 4 categorias**;
 - responde perguntas em **texto livre** com uma **busca por pontuação** e nível de confiança;
 - permite **navegar por categorias** com menus numerados;
 - informa **documentos necessários, onde ir, fonte oficial e data de verificação**;
@@ -63,6 +63,7 @@ O programa pode ser executado de qualquer pasta (`python caminho/para/main.py`),
 2 - Navegar por categorias
 3 - Ver indicadores de atendimento
 4 - Exportar atendimentos para CSV
+5 - Simulador e Comparativo de Energia Sustentável (SERS)
 0 - Sair
 ```
 
@@ -74,15 +75,19 @@ Ao escolher **0 - Sair**, o assistente pede uma **nota de facilidade de 1 a 5** 
 
 ```text
 citizen-assist-ai/
-├── README.md                  # este documento
-├── main.py                    # menu principal e fluxo do programa
-├── orientacao.py              # classe Orientacao
-├── base_conhecimento.py       # classe BaseConhecimento + normalizar()
-├── assistente.py              # classe Assistente (atendimento, histórico, indicadores, CSV)
-└── data/
-    ├── base_conhecimento.json # 16 orientações verificadas
-    ├── historico.json         # atendimentos registrados (começa como [])
-    └── atendimentos.csv       # exportação dos atendimentos (começa só com o cabeçalho)
+├── README.md                          # este documento
+├── main.py                            # menu principal e fluxo do programa
+├── orientacao.py                      # classe Orientacao
+├── base_conhecimento.py               # classe BaseConhecimento + normalizar()
+├── assistente.py                      # classe Assistente (atendimento, histórico, indicadores, CSV)
+├── data/
+│   ├── base_conhecimento.json         # 17 orientações verificadas (incluindo estudo SERS)
+│   ├── historico.json                 # atendimentos registrados
+│   └── atendimentos.csv               # exportação dos atendimentos
+└── sers_energia/                      # contribuição dedicada de SERS
+    ├── analise_energetica.py          # cálculos e tabela comparativa em Python puro
+    ├── dados_consumo_comparativo.json # dados públicos reais + premissas justificadas
+    └── ESTUDO_SERS.md                 # estudo técnico completo de energia e sustentabilidade
 ```
 
 ### Classes e composição
@@ -186,6 +191,7 @@ Lista de dicionários, um por orientação, com **todos os campos obrigatórios*
 | | 14 | Entender as bandeiras tarifárias da conta de luz |
 | | 15 | Economizar energia e escolher aparelhos eficientes (Selo Procel) |
 | | 16 | Gerar a própria energia solar em casa (geração distribuída) |
+| | 17 | Comparar chuveiro eficiente e aquecimento solar de água (SERS) |
 
 > As respostas foram escritas a partir das páginas oficiais listadas em [Fontes consultadas](#-fontes-consultadas), conferidas em **16/11/2026**. Nenhuma informação foi inventada; quando um detalhe varia por estado (ex.: onde emitir a CIN), a resposta indica o órgão responsável em vez de supor.
 
@@ -326,8 +332,65 @@ Sua mensagem foi recusada e NÃO foi registrada. Reescreva a dúvida sem dados p
 
 ## 🔗 Integrações com outras disciplinas
 
-- **Energia e Sustentabilidade → SERS (integração futura):** a categoria *Energia e Sustentabilidade* (Tarifa Social, bandeiras tarifárias, eficiência energética e energia solar) foi criada já pensando na integração futura com o **SERS**. Como a base é um JSON simples e a classe `BaseConhecimento` é independente da interface, novas orientações ou dados vindos desse projeto podem ser adicionados sem alterar a lógica de busca. *Status: planejada, ainda não implementada.*
+- **Energia e Sustentabilidade → SERS (integrada):** a categoria *Energia e Sustentabilidade* foi expandida e integrada ao módulo [`sers_energia/`](sers_energia/ESTUDO_SERS.md), com estudo comparativo entre eficiência energética e fonte renovável, simulador acessível diretamente pela **opção 5** do menu principal e orientações sustentadas pelos cálculos reais em `data/base_conhecimento.json`. *Status: implementada e integrada.*
 - A busca por pontuação descrita acima continua sendo o mecanismo principal avaliado em PCP.
+
+---
+
+## Contribuição — Soluções em Energias Renováveis e Sustentáveis (SERS)
+
+> **Responsável:** Alan Júnior Araújo de Souza (RM 574112) | **Arquivos dedicados:** [`sers_energia/`](sers_energia/ESTUDO_SERS.md) (`analise_energetica.py`, `dados_consumo_comparativo.json` e `ESTUDO_SERS.md`).
+
+### 1. Público-alvo e Problema Energético
+- **Público-alvo:** jovens no primeiro emprego e famílias brasileiras de renda baixa a média (residência padrão com **3 moradores**).
+- **Necessidade energética analisada:** **aquecimento de água para banho diário** (3 banhos/dia, 30 dias/mês).
+- **Problema:** segundo a EPE e o Procel, o consumo médio residencial no Brasil é de **177 a 180 kWh/mês**, e o chuveiro elétrico (potência típica entre **4.400 W e 7.600 W**) pode responder por **25% a 30% da fatura mensal**, além de gerar sobrecarga no horário de pico (17h às 20h).
+
+### 2. Resumo da Análise e Comparação com Fonte Renovável
+Premissas explícitas (detalhadas em [`sers_energia/dados_consumo_comparativo.json`](sers_energia/dados_consumo_comparativo.json)):
+- **Dados públicos reais:** tarifa residencial de referência **R$ 0,80/kWh** (mediana nacional B1 ANEEL entre R$ 0,79 e R$ 0,85/kWh) e fator médio de emissão do Sistema Interligado Nacional **0,0461 kgCO2/kWh** (MCTI/SIRENE — ano base consolidado 2025).
+- **Estimativas justificadas:** 3 moradores, 30 dias/mês, período comum mensal, anual e **5 anos (60 meses)**; fração solar anual de **80%** no aquecedor solar (20% de apoio elétrico em dias nublados).
+
+| Cenário (mesma necessidade: 3 banhos/dia) | Consumo mensal | Custo mensal | Economia/mês | CAPEX estimado | Payback simples | Economia em 5 anos | CO2 evitado (5 anos) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **Base:** Chuveiro tradicional (5.500 W, 12 min/pessoa) | 99,0 kWh | R$ 79,20 | — | R$ 0,00 | — | — | — |
+| **Alt. 1 — Eficiência:** Chuveiro 3.800 W + redutor + 8 min/pessoa | 45,6 kWh (**-53,9%**) | R$ 36,48 | **R$ 42,72** | R$ 180,00 | **4,2 meses** | R$ 2.563,20 *(saldo +R$ 2.383,20)* | **147,70 kgCO2** |
+| **Alt. 2 — Renovável (SAS):** Aquecedor Solar Compacto 200 L (Selo Procel) | 19,8 kWh (**-80,0%**) | R$ 15,84 | **R$ 63,36** | R$ 3.200,00 | **50,5 meses** (~4,2 anos) | R$ 3.801,60 *(saldo +R$ 601,60)* | **219,06 kgCO2** |
+
+*Nota complementar:* para quem busca abater a **conta inteira da residência**, a orientação **16** compara também a **Microgeração Solar Fotovoltaica** (Lei 14.300/2022, kit pequeno estimado entre R$ 8.000 e R$ 14.000, retorno típico de 4 a 7 anos). Já a **Alternativa 1** tem viabilidade imediata mesmo em imóveis alugados, enquanto a **Alternativa 2 (SAS)** entrega o maior abatimento e redução de CO2 no longo prazo em casas próprias com telhado ensolarado.
+
+### 3. Como testar as funcionalidades de energia
+1. **Via script independente (cálculos e tabela comparativa no terminal):**
+   ```bash
+   python sers_energia/analise_energetica.py
+   ```
+2. **Via menu principal do Citizen Assist AI:**
+   ```bash
+   python main.py
+   ```
+   - Escolha a opção **`5` (Simulador e Comparativo de Energia Sustentável - SERS)** para exibir o comparativo completo de consumo, custos, payback e emissões.
+   - Ou escolha **`1` (Fazer uma pergunta)** e consulte termos como `"chuveiro"`, `"aquecedor solar"`, `"selo procel"`, `"energia solar"` ou `"conta de luz"`, ou navegue em **`2` → `Energia e Sustentabilidade`** (orientações **13 a 17**).
+
+### 4. Testes com Usuários (Específicos de Energia — SERS)
+Testes de compreensão e utilidade realizados com **3 perfis anônimos** (sem coleta de dados pessoais):
+
+| Perfil anônimo | Situação testada | Comentário recebido | Ajuste aplicado no texto das respostas |
+| --- | --- | --- | --- |
+| **Perfil E1** *(Jovem em imóvel alugado)* | Dúvida sobre reduzir gasto do chuveiro e leitura do comparativo (opção 5) | Gostou do payback curto de ~4 meses no chuveiro eficiente, mas questionou se poderia instalar aquecedor solar em casa alugada | Explicitado na orientação **17** e no simulador que o **aquecedor solar (SAS)** requer imóvel próprio ou autorização/adaptação hidráulica, recomendando a **Alternativa 1** para aluguel |
+| **Perfil E2** *(Família avaliando energia solar)* | Leitura das orientações **16** e **17** | Confundiu **aquecedor solar de água (SAS)** com **painel fotovoltaico**, achando que os 80% valiam para todos os aparelhos | Diferenciado de forma explícita nas orientações **16 e 17** que o **SAS aquece somente a água do banho** e o **fotovoltaico gera eletricidade para toda a casa** |
+| **Perfil E3** *(Cidadão comparando a conta local)* | Análise dos valores em R$/mês (`R$ 42,72` e `R$ 63,36`) | Perguntou se a economia exibida era garantida na distribuidora dele | Inserido aviso claro das premissas (`R$ 0,80/kWh`, 3 moradores) e de que as estimativas **não são resultados garantidos** |
+
+### 5. Referências e Limitações (SERS)
+- **Referências verificáveis:**
+  - ANEEL — Tarifas e Informações Econômico-Financeiras: https://www.gov.br/aneel/pt-br/centrais-de-conteudos/relatorios-e-indicadores/tarifas-e-informacoes-economico-financeiras
+  - EPE — Anuário Estatístico de Energia Elétrica: https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica
+  - EPE — Atlas da Eficiência Energética Brasil: https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/atlas-da-eficiencia-energetica-brasil
+  - MCTI / SIRENE — Fatores de Emissão de CO2 (SIN 2025): https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/sirene/dados-e-ferramentas/fatores-de-emissao
+  - Selo Procel (Eficiência Energética): https://smartseloprocel.procelinfo.com.br/selo-procel
+- **Limitações explícitas:** todas as projeções de economia, geração solar, custos de equipamentos (`CAPEX`) e payback são **estimativas baseadas em valores médios e NÃO constituem resultados garantidos**. Valores reais variam conforme região, distribuidora, bandeira tarifária, impostos estaduais (ICMS), irradiação solar, sombreamento do telhado e perfil de uso da família. O documento completo está em [`sers_energia/ESTUDO_SERS.md`](sers_energia/ESTUDO_SERS.md).
+
+### 6. Vídeo técnico de SERS
+📺 **Link do vídeo técnico SERS no YouTube (até 3 min, não listado):** [https://youtu.be/JF32D_Cfd4E](https://youtu.be/JF32D_Cfd4E)
 
 ---
 

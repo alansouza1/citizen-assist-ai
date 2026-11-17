@@ -190,5 +190,29 @@
         "tentativas": 1,
         "tempo_segundos": 37.8,
         "nota_facilidade": 5
+    },
+    {
+        "data": "2026-11-16 22:15:38",
+        "sessao": "2026-11-16 22:09:04",
+        "origem": "pergunta",
+        "pergunta": "aquecedor solar",
+        "id_orientacao": 17,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 363.7,
+        "nota_facilidade": 5
+    },
+    {
+        "data": "2026-11-16 22:17:05",
+        "sessao": "2026-11-16 22:16:10",
+        "origem": "pergunta",
+        "pergunta": "aquecedor solar",
+        "id_orientacao": 17,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 31.0,
+        "nota_facilidade": 5
     }
 ]
